@@ -1,17 +1,3 @@
-    library(rvest)
-    library(dplyr)
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
 As an avid beer drinker, I often find myself wanting to try many
 different beers that I see at the liquor store. Due to lack of money and
 room in my fridge, I leave with just a single 6-pack or 12-pack of a new
@@ -625,61 +611,63 @@ Let’s get packing.
       
     }
 
+## INTERACTIVE INPUT
+
     # Variety pack
     variety_pack <- beer_picker(1,2,2,1)
     variety_pack
 
-    ##                                        Name                    Type
-    ## 1 Schorschbräu Schorschbock 31%Schorschbräu                 Eisbock
-    ## 2                                      Lucy             Belgian IPA
-    ## 3                                Mo' Galaxy            American IPA
-    ## 4                             Hell's Holler          English Porter
-    ## 5                        Barrel-Aged 4Beans           Baltic Porter
-    ## 6               Kentucky Brunch Brand Stout American Imperial Stout
+    ##                               Name            Type
+    ## 1               Mönchshof Bockbier            Bock
+    ## 2                            Green New England IPA
+    ## 3                       Upper Case New England IPA
+    ## 4   Hidden Pipe Porter With Coffee American Porter
+    ## 5 Toasted Coconut Chocolate Porter American Porter
+    ## 6                Brown Trout Stout Irish Dry Stout
 
     # Bock pack
     bock_pack <- beer_picker(6,0,0,0)
     bock_pack
 
-    ##                                Name       Type
-    ## 1                           Maibock    Maibock
-    ## 2                      Toasted Bock       Bock
-    ## 3 Samuel Adams Toasted Caramel Bock       Bock
-    ## 4                        Face Plant Weizenbock
-    ## 5                        Strawgator    Maibock
-    ## 6                           Maibock    Maibock
+    ##                  Name       Type
+    ## 1                 Bär Weizenbock
+    ## 2           Andygator    Maibock
+    ## 3         Cabin Fever    Maibock
+    ## 4         Schnee Boot    Eisbock
+    ## 5    1516 Heller Bock    Maibock
+    ## 6 Creemore Springs Ur       Bock
 
     # IPA pack
     ipa_pack <- beer_picker(0,6,0,0)
     ipa_pack
 
-    ##                         Name         Type
-    ## 1               Double Dobis Imperial IPA
-    ## 2 Highway To The Danker Zone Imperial IPA
-    ## 3             Galaxy Unicorn Imperial IPA
-    ## 4           I See A Dankness Imperial IPA
-    ## 5                    IBUsive American IPA
-    ## 6           Juice Gymnastics Imperial IPA
+    ##                                          Name            Type
+    ## 1 Society & Solitude #6Hill Farmstead Brewery New England IPA
+    ## 2                         De Ranke XXX Bitter     Belgian IPA
+    ## 3   Notorious Triple IPABoneyard Beer Company    Imperial IPA
+    ## 4                                 Head Hunter    American IPA
+    ## 5                                       Hopus     Belgian IPA
+    ## 6                                    Squeezit    Imperial IPA
 
     # Porter pack
     porter_pack <- beer_picker(0,0,6,0)
     porter_pack
 
-    ##                                                       Name            Type
-    ## 1                                                    Henry American Porter
-    ## 2 Grande Cuvée Porter Baltique - Fûts De Bourbon Et Brandy   Baltic Porter
-    ## 3                                             Morning Bean Imperial Porter
-    ## 4                                          Bricks & Mortar American Porter
-    ## 5                                                 Bell Cow American Porter
-    ## 6                                          You're Coconuts American Porter
+    ##                                    Name            Type
+    ## 1                             Baba Yaga American Porter
+    ## 2                          Perky Porter  English Porter
+    ## 3        Bunker-CBurley Oak Brewing Co. American Porter
+    ## 4           Wrecking Ball Baltic Porter   Baltic Porter
+    ## 5     Bourbon Barrel-Aged Framinghammer   Baltic Porter
+    ## 6 Barrel-Aged Framinghammer - Cocoa-Nut   Baltic Porter
 
     stout_pack <- beer_picker(0,0,0,6)
     stout_pack
 
-    ##                           Name                    Type
-    ## 1        Rêve - Mocha Hazelnut          American Stout
-    ## 2                  Black Death           English Stout
-    ## 3 Kentucky Coffee Barrel Stout           English Stout
-    ## 4            Peanut Butter Cup          American Stout
-    ## 5         Wrasslers XXXX Stout         Irish Dry Stout
-    ## 6                Monster Tones American Imperial Stout
+    ##                                    Name                    Type
+    ## 1                            Deth's Tar           Oatmeal Stout
+    ## 2                          French Press          American Stout
+    ## 3          Kentucky Coffee Barrel Stout           English Stout
+    ## 4                         Jam The Radar American Imperial Stout
+    ## 5 Barrel Aged Bomb!Prairie Artisan Ales American Imperial Stout
+    ## 6                       Half Moon Stout           English Stout

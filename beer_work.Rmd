@@ -9,7 +9,7 @@ output: md_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r include=FALSE}
 library(rvest)
 library(dplyr)
 ```
@@ -527,7 +527,11 @@ beer_picker <- function(bocks_n, ipas_n, porters_n, stouts_n) {
   beer_df <- data.frame(Name = c(bname, iname, pname, sname), Type = c(btype, itype, ptype, stype))
   
 }
+```
 
+## INTERACTIVE INPUT
+
+```{r}
 # Variety pack
 variety_pack <- beer_picker(1,2,2,1)
 variety_pack
@@ -546,3 +550,7 @@ porter_pack
 
 stout_pack <- beer_picker(0,0,0,6)
 stout_pack
+```
+
+
+
