@@ -127,8 +127,10 @@ weizenbocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", weizenbocks$Name)
 weizenbocks <- tidyr::separate(weizenbocks, Name, c("Beer Name", "Brewery"), sep = "_")
 
 weizenbocks <- weizenbocks %>% select(-c('Brewery'))
+```
 
-# All bocks
+## All bocks
+```{r echo=FALSE}
 all_bocks <- dplyr::bind_rows(bocks,
                               doppelbocks,
                               eisbocks,

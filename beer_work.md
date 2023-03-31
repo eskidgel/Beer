@@ -30,6 +30,8 @@ A variety pack of new, cool, and the best beers in the world!
 
     ## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [23].
 
+## All bocks
+
 ## India Pale Ales
 
     ## Warning: Expected 2 pieces. Additional pieces discarded in 1 rows [52].
@@ -131,49 +133,42 @@ Let’s get packing.
 
 This is the interactive portion.
 
-    ##                              Name            Type
-    ## 1                     Consecrator      Doppelbock
-    ## 2           FOSHOMOBrew Gentlemen New England IPA
-    ## 3                    Hop Wrangler     Belgian IPA
-    ## 4    Shirley Mae: Sunrise Edition American Porter
-    ## 5 Battleaxe - Bourbon Barrel-Aged   Baltic Porter
-    ## 6                    Charon Stout Irish Dry Stout
+    ##                                         Name            Type
+    ## 1                       Alexander Supertramp      Doppelbock
+    ## 2                           Texels Goudkoppe     Belgian IPA
+    ## 3 Joker IPAWilliams Brothers Brewing Company     English IPA
+    ## 4       Two Pump Chump - Coffee And Hazelnut American Porter
+    ## 5  Ancho Chili Dutch Double Chocolate Porter American Porter
+    ## 6                       O'Hara's Irish Stout Irish Dry Stout
 
-    ##                            Name       Type
-    ## 1                        Uff-da       Bock
-    ## 2          Ziegemeister Maibock    Maibock
-    ## 3              Primátor Maibock    Maibock
-    ## 4                 Autumnal Fire Doppelbock
-    ## 5 Poretti 5 Luppoli Bock Chiara    Maibock
-    ## 6                High Celebrant Doppelbock
+    ##                                         Name       Type
+    ## 1                      The Finest Doppelbock Doppelbock
+    ## 2 Alpirsbacher Klosterbräu Kloster Starkbier    Maibock
+    ## 3                       Generator Doppelbock Doppelbock
+    ## 4                          Afternoon Delight Doppelbock
+    ## 5                                 Lucubrator Doppelbock
+    ## 6                                    Maibock    Maibock
 
-    ##                                                                                         Name
-    ## 1 Flip Flopped White Socked Strong Hopped White IPAThe Flying Dutchman Nomad Brewing Company
-    ## 2                                                                            Bright - Galaxy
-    ## 3                                                                              Cosmic Waffle
-    ## 4                                                                                  Albatross
-    ## 5                                                 Chazz Michael Michaels - Double Dry-Hopped
-    ## 6                                                                           Troubadour Magma
-    ##              Type
-    ## 1     Belgian IPA
-    ## 2    Imperial IPA
-    ## 3     Belgian IPA
-    ## 4 New England IPA
-    ## 5    American IPA
-    ## 6     Belgian IPA
+    ##                                               Name            Type
+    ## 1 Nags Head I.P.A.The Lost Colony Brewery and Cafe     English IPA
+    ## 2                                 DDDoublegangerrr    Imperial IPA
+    ## 3   Galactic Haze IPAHop and Sting Brewing Company     Belgian IPA
+    ## 4                     Broo Doo3 Floyds Brewing Co.    American IPA
+    ## 5                                   India Pale Ale     English IPA
+    ## 6                                    Double Galaxy New England IPA
 
-    ##                           Name            Type
-    ## 1 Shirley Mae: Sunrise Edition American Porter
-    ## 2                 Morning Bean Imperial Porter
-    ## 3                       Porter American Porter
-    ## 4                Mocha Machine Imperial Porter
-    ## 5                   The Porter  English Porter
-    ## 6         Coffee Baltic Porter   Baltic Porter
+    ##                                         Name            Type
+    ## 1         God Damn Maple Syrup Pigeon Porter Imperial Porter
+    ## 2             Asylum42 North Brewing Company  English Porter
+    ## 3                         Honeycomb Catacomb Imperial Porter
+    ## 4 Barrel-Aged Framinghammer - Salted Caramel   Baltic Porter
+    ## 5                           Old-Style Porter  English Porter
+    ## 6                    Caramel Espresso Porter American Porter
 
-    ##                   Name                    Type
-    ## 1 Ashlawn Coffee Stout          American Stout
-    ## 2        Henna: S’more American Imperial Stout
-    ## 3         Oyster Stout         Irish Dry Stout
-    ## 4      Steeprock Stout         Irish Dry Stout
-    ## 5      La Sang-d'encre         Irish Dry Stout
-    ## 6       Perle Ai Porci           English Stout
+    ##                                Name                    Type
+    ## 1            Sad Panda Coffee Stout          American Stout
+    ## 2                     Oatmeal Stout           Oatmeal Stout
+    ## 3              Murphy's Irish Stout         Irish Dry Stout
+    ## 4                  Uncle Disheveled          American Stout
+    ## 5                      Larry's Last           Oatmeal Stout
+    ## 6 Bourbon County Brand Coffee Stout American Imperial Stout
