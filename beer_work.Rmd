@@ -14,14 +14,14 @@ library(rvest)
 library(dplyr)
 ```
 
-As an avid beer drinker, I often find myself wanting to try many different beers that I see at the liquor store. Due to lack of money and room in my fridge, I leave with just a single 6-pack or 12-pack of a new beer that I may or may not like. If only there was a way to purchase one pack of beer that has multiple types of beer inside...
+As an avid beer drinker, I often find myself wanting to try many different beers that I see at the liquor store. Due to lack of money and room in my fridge, I leave with just a single 6-pack of a new beer that I may or may not like. If only there was a way to purchase one pack of beer that has multiple types of beer inside...
 
 A variety pack of new, cool, and the best beers in the world! 
 
-Top rated beers by style:
+### Top rated beers by style:
 
 ## Bocks
-```{r}
+```{r echo=FALSE}
 bock_link <- "https://www.beeradvocate.com/beer/top-styles/32/"
 doppelbock_link <- "https://www.beeradvocate.com/beer/top-styles/35/"
 eisbock_link <- "https://www.beeradvocate.com/beer/top-styles/36/"
@@ -138,7 +138,7 @@ all_bocks <- dplyr::bind_rows(bocks,
 
 
 ## India Pale Ales
-```{r}
+```{r echo=FALSE}
 american_link <- "https://www.beeradvocate.com/beer/top-styles/116/"
 belgian_link <- "https://www.beeradvocate.com/beer/top-styles/174/"
 english_link <- "https://www.beeradvocate.com/beer/top-styles/150/"
@@ -254,7 +254,7 @@ all_ipas <- dplyr::bind_rows(american_ipa,
 ```
 
 ## Porters
-```{r}
+```{r echo=FALSE}
 american_porter_link <- "https://www.beeradvocate.com/beer/top-styles/159/"
 baltic_porter_link <- "https://www.beeradvocate.com/beer/top-styles/80/"
 english_porter_link <- "https://www.beeradvocate.com/beer/top-styles/101/"
@@ -372,7 +372,7 @@ all_porters <- dplyr::bind_rows(american_porter,
  
 ## Stouts 
 
-```{r}
+```{r echo=FALSE}
 american_imperial_link <- "https://www.beeradvocate.com/beer/top-styles/157/"
 american_stout_link <- "https://www.beeradvocate.com/beer/top-styles/158/"
 english_stout_link <- "https://www.beeradvocate.com/beer/top-styles/13/"
@@ -489,7 +489,7 @@ all_stouts <- dplyr::bind_rows(american_imperial,
 
 Now that I have all of the beer available, let's join them all together to begin creating variety packs. 
 
-```{r}
+```{r echo=FALSE}
 all_beers <- dplyr::bind_rows(all_bocks,
                               all_ipas,
                               all_porters,
@@ -498,11 +498,11 @@ all_beers <- dplyr::bind_rows(all_bocks,
 
 Let's get packing. 
 
-```{r}
+```{r echo=FALSE}
 library(tidyverse)
 ```
 
-```{r}
+```{r echo=FALSE}
 beer_picker <- function(bocks_n, ipas_n, porters_n, stouts_n) {
   #bocks
   bocks_sample <- sample(1:nrow(all_bocks), bocks_n)
@@ -532,7 +532,7 @@ beer_picker <- function(bocks_n, ipas_n, porters_n, stouts_n) {
 ## INTERACTIVE INPUT
 This is the interactive portion.
 
-```{r}
+```{r echo=FALSE}
 # Variety pack
 variety_pack <- beer_picker(1,2,2,1)
 variety_pack
