@@ -136,8 +136,8 @@ all_bocks <- dplyr::bind_rows(bocks,
                               eisbocks,
                               maibocks,
                               weizenbocks)
+all_bocks
 ```
-
 
 ## India Pale Ales
 ```{r echo=FALSE}

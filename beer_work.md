@@ -32,6 +32,21 @@ A variety pack of new, cool, and the best beers in the world!
 
 ## All bocks
 
+    ## # A tibble: 345 × 5
+    ##     Rank `Beer Name`                         Ratings   Avg `Beer Type`
+    ##    <int> <chr>                               <chr>   <dbl> <chr>      
+    ##  1     1 Funeral Bock                        37       4.19 Bock       
+    ##  2     2 Christmas Bock                      16       4.28 Bock       
+    ##  3     3 Bourbon Love Honey Barrel-Aged Bock 26       4.17 Bock       
+    ##  4     4 Mystic Bock                         12       4.24 Bock       
+    ##  5     5 Genuine Bock Beer                   31       4.07 Bock       
+    ##  6     6 La Trappe Bockbier                  305      3.98 Bock       
+    ##  7     7 Holiday Bock                        26       4.06 Bock       
+    ##  8     8 Aass Bock                           67       3.99 Bock       
+    ##  9     9 Ayinger Winterbock                  50       4    Bock       
+    ## 10    10 Baphomet Bock                       34       4.02 Bock       
+    ## # … with 335 more rows
+
 ## India Pale Ales
 
     ## Warning: Expected 2 pieces. Additional pieces discarded in 1 rows [52].
@@ -133,42 +148,42 @@ Let’s get packing.
 
 This is the interactive portion.
 
-    ##                                         Name            Type
-    ## 1                       Alexander Supertramp      Doppelbock
-    ## 2                           Texels Goudkoppe     Belgian IPA
-    ## 3 Joker IPAWilliams Brothers Brewing Company     English IPA
-    ## 4       Two Pump Chump - Coffee And Hazelnut American Porter
-    ## 5  Ancho Chili Dutch Double Chocolate Porter American Porter
-    ## 6                       O'Hara's Irish Stout Irish Dry Stout
+    ##                                      Name            Type
+    ## 1            EKU 28Kulmbacher Brauerei AG      Doppelbock
+    ## 2 Hexagenia IPAFall River Brewing Company    American IPA
+    ## 3 Green Killer IPABrasserie de Silly S.A.     Belgian IPA
+    ## 4                                  Porter  English Porter
+    ## 5                      Korova Milk Porter American Porter
+    ## 6                               Wood Knot  American Stout
 
-    ##                                         Name       Type
-    ## 1                      The Finest Doppelbock Doppelbock
-    ## 2 Alpirsbacher Klosterbräu Kloster Starkbier    Maibock
-    ## 3                       Generator Doppelbock Doppelbock
-    ## 4                          Afternoon Delight Doppelbock
-    ## 5                                 Lucubrator Doppelbock
-    ## 6                                    Maibock    Maibock
+    ##                                 Name       Type
+    ## 1                             Koźlak       Bock
+    ## 2 Scheyern Kloster-Doppelbock Dunkel Doppelbock
+    ## 3                     Christmas Bock       Bock
+    ## 4                          Alpenglow Weizenbock
+    ## 5                 Velvet Hammer Bock       Bock
+    ## 6                Jeff's Bavarian Ale Weizenbock
 
-    ##                                               Name            Type
-    ## 1 Nags Head I.P.A.The Lost Colony Brewery and Cafe     English IPA
-    ## 2                                 DDDoublegangerrr    Imperial IPA
-    ## 3   Galactic Haze IPAHop and Sting Brewing Company     Belgian IPA
-    ## 4                     Broo Doo3 Floyds Brewing Co.    American IPA
-    ## 5                                   India Pale Ale     English IPA
-    ## 6                                    Double Galaxy New England IPA
+    ##                                                   Name            Type
+    ## 1                                                   Im     English IPA
+    ## 2 Jade IPAFoothills Brewing Company - Downtown Brewpub    American IPA
+    ## 3                      Dreadnaught3 Floyds Brewing Co.    Imperial IPA
+    ## 4                                              Ephraim New England IPA
+    ## 5                                        Travelin' Man     Belgian IPA
+    ## 6                                         The Realness    Imperial IPA
 
-    ##                                         Name            Type
-    ## 1         God Damn Maple Syrup Pigeon Porter Imperial Porter
-    ## 2             Asylum42 North Brewing Company  English Porter
-    ## 3                         Honeycomb Catacomb Imperial Porter
-    ## 4 Barrel-Aged Framinghammer - Salted Caramel   Baltic Porter
-    ## 5                           Old-Style Porter  English Porter
-    ## 6                    Caramel Espresso Porter American Porter
+    ##                                 Name            Type
+    ## 1                     Coconut Porter American Porter
+    ## 2                             Porter  English Porter
+    ## 3                      Tommys Porter  English Porter
+    ## 4                   Slingshot Porter American Porter
+    ## 5 Black Butte XXXIVDeschutes Brewery Imperial Porter
+    ## 6                        Achocolypse  English Porter
 
-    ##                                Name                    Type
-    ## 1            Sad Panda Coffee Stout          American Stout
-    ## 2                     Oatmeal Stout           Oatmeal Stout
-    ## 3              Murphy's Irish Stout         Irish Dry Stout
-    ## 4                  Uncle Disheveled          American Stout
-    ## 5                      Larry's Last           Oatmeal Stout
-    ## 6 Bourbon County Brand Coffee Stout American Imperial Stout
+    ##                                     Name                    Type
+    ## 1                   Ashlawn Coffee Stout          American Stout
+    ## 2                       Black Note Stout American Imperial Stout
+    ## 3                       Dragonhead Stout           English Stout
+    ## 4 Santa's Private Reserve 2022Rogue Ales          American Stout
+    ## 5                     Emerald Isle Stout         Irish Dry Stout
+    ## 6              White Canyon Blonde Stout          American Stout
