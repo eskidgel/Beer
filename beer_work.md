@@ -613,61 +613,63 @@ Let’s get packing.
 
 ## INTERACTIVE INPUT
 
+This is the interactive portion.
+
     # Variety pack
     variety_pack <- beer_picker(1,2,2,1)
     variety_pack
 
-    ##                               Name            Type
-    ## 1               Mönchshof Bockbier            Bock
-    ## 2                            Green New England IPA
-    ## 3                       Upper Case New England IPA
-    ## 4   Hidden Pipe Porter With Coffee American Porter
-    ## 5 Toasted Coconut Chocolate Porter American Porter
-    ## 6                Brown Trout Stout Irish Dry Stout
+    ##                                                   Name                    Type
+    ## 1 Ettaler Curator Dunkler Doppelbock US Import Version              Doppelbock
+    ## 2                             East IPABrooklyn Brewery             English IPA
+    ## 3                                              Rapture            American IPA
+    ## 4                                            Black Ale         American Porter
+    ## 5              Knecht Ruprecht IIThe Lone Pint Brewery         American Porter
+    ## 6                                        Black Tuesday American Imperial Stout
 
     # Bock pack
     bock_pack <- beer_picker(6,0,0,0)
     bock_pack
 
-    ##                  Name       Type
-    ## 1                 Bär Weizenbock
-    ## 2           Andygator    Maibock
-    ## 3         Cabin Fever    Maibock
-    ## 4         Schnee Boot    Eisbock
-    ## 5    1516 Heller Bock    Maibock
-    ## 6 Creemore Springs Ur       Bock
+    ##                 Name       Type
+    ## 1     Ironshore Bock       Bock
+    ## 2     Prognosticator Doppelbock
+    ## 3 Schmucker Rosébock    Maibock
+    ## 4   Silver Star Bock       Bock
+    ## 5   Spaten Optimator Doppelbock
+    ## 6        Snake Venom    Eisbock
 
     # IPA pack
     ipa_pack <- beer_picker(0,6,0,0)
     ipa_pack
 
-    ##                                          Name            Type
-    ## 1 Society & Solitude #6Hill Farmstead Brewery New England IPA
-    ## 2                         De Ranke XXX Bitter     Belgian IPA
-    ## 3   Notorious Triple IPABoneyard Beer Company    Imperial IPA
-    ## 4                                 Head Hunter    American IPA
-    ## 5                                       Hopus     Belgian IPA
-    ## 6                                    Squeezit    Imperial IPA
+    ##                             Name            Type
+    ## 1                       Flagship     English IPA
+    ## 2                       Epiphany New England IPA
+    ## 3                     Very Sappy    Imperial IPA
+    ## 4                  Perfect Storm New England IPA
+    ## 5              Winston Sheffield     English IPA
+    ## 6 Double Dry Hopped Green Street    American IPA
 
     # Porter pack
     porter_pack <- beer_picker(0,0,6,0)
     porter_pack
 
-    ##                                    Name            Type
-    ## 1                             Baba Yaga American Porter
-    ## 2                          Perky Porter  English Porter
-    ## 3        Bunker-CBurley Oak Brewing Co. American Porter
-    ## 4           Wrecking Ball Baltic Porter   Baltic Porter
-    ## 5     Bourbon Barrel-Aged Framinghammer   Baltic Porter
-    ## 6 Barrel-Aged Framinghammer - Cocoa-Nut   Baltic Porter
+    ##                                           Name            Type
+    ## 1          Victory At Sea - Coffee And Vanilla Imperial Porter
+    ## 2                                       Porter  English Porter
+    ## 3                           Kittywampus Brunch Imperial Porter
+    ## 4                                 Cupid's Envy Imperial Porter
+    ## 5 Bourbon Barrel Aged Hellfighter Bourbon Bean Imperial Porter
+    ## 6                          London Style Porter  English Porter
 
     stout_pack <- beer_picker(0,0,0,6)
     stout_pack
 
-    ##                                    Name                    Type
-    ## 1                            Deth's Tar           Oatmeal Stout
-    ## 2                          French Press          American Stout
-    ## 3          Kentucky Coffee Barrel Stout           English Stout
-    ## 4                         Jam The Radar American Imperial Stout
-    ## 5 Barrel Aged Bomb!Prairie Artisan Ales American Imperial Stout
-    ## 6                       Half Moon Stout           English Stout
+    ##                                        Name                    Type
+    ## 1             Chaos Grid - The Final Course American Imperial Stout
+    ## 2                Double Shot - Vanilla Bean American Imperial Stout
+    ## 3                           Black Cat Stout         Irish Dry Stout
+    ## 4                  Caribbean Chocolate Cake          American Stout
+    ## 5                              G.F.Y. Stout          American Stout
+    ## 6 Wake-n-Bake Coffee Oatmeal Imperial Stout           Oatmeal Stout

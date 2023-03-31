@@ -530,6 +530,7 @@ beer_picker <- function(bocks_n, ipas_n, porters_n, stouts_n) {
 ```
 
 ## INTERACTIVE INPUT
+This is the interactive portion.
 
 ```{r}
 # Variety pack
