@@ -2,7 +2,7 @@
 title: "Beer_Work"
 author: "Emilee Skidgel"
 date: "2023-03-09"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
