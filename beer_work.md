@@ -32,7 +32,7 @@ A variety pack of new, cool, and the best beers in the world!
 
 ## All bocks
 
-    ## # A tibble: 345 × 5
+    ## # A tibble: 15 × 5
     ##     Rank `Beer Name`                         Ratings   Avg `Beer Type`
     ##    <int> <chr>                               <chr>   <dbl> <chr>      
     ##  1     1 Funeral Bock                        37       4.19 Bock       
@@ -45,7 +45,11 @@ A variety pack of new, cool, and the best beers in the world!
     ##  8     8 Aass Bock                           67       3.99 Bock       
     ##  9     9 Ayinger Winterbock                  50       4    Bock       
     ## 10    10 Baphomet Bock                       34       4.02 Bock       
-    ## # … with 335 more rows
+    ## 11    11 St. Nikolaus Bock Bier              445      3.94 Bock       
+    ## 12    12 Burkhart                            13       4.07 Bock       
+    ## 13    13 Winterhammer                        18       4.02 Bock       
+    ## 14    14 Thumbprint Mocha Berry Bock         34       3.96 Bock       
+    ## 15    15 Lifesblood                          10       4.1  Bock
 
 ## India Pale Ales
 
@@ -148,42 +152,42 @@ Let’s get packing.
 
 This is the interactive portion.
 
-    ##                                      Name            Type
-    ## 1            EKU 28Kulmbacher Brauerei AG      Doppelbock
-    ## 2 Hexagenia IPAFall River Brewing Company    American IPA
-    ## 3 Green Killer IPABrasserie de Silly S.A.     Belgian IPA
-    ## 4                                  Porter  English Porter
-    ## 5                      Korova Milk Porter American Porter
-    ## 6                               Wood Knot  American Stout
+    ##                        Name                    Type
+    ## 1             Quittin' Time                 Maibock
+    ## 2        Curiosity Eighteen            Imperial IPA
+    ## 3   BFFGrimm Artisanal Ales             Belgian IPA
+    ## 4             Anchor Porter         American Porter
+    ## 5          Black Oak Porter          English Porter
+    ## 6 Bomb!Prairie Artisan Ales American Imperial Stout
 
-    ##                                 Name       Type
-    ## 1                             Koźlak       Bock
-    ## 2 Scheyern Kloster-Doppelbock Dunkel Doppelbock
-    ## 3                     Christmas Bock       Bock
-    ## 4                          Alpenglow Weizenbock
-    ## 5                 Velvet Hammer Bock       Bock
-    ## 6                Jeff's Bavarian Ale Weizenbock
+    ##                                       Name       Type
+    ## 1                                  Maypole    Maibock
+    ## 2                         Fire And Eisbock    Eisbock
+    ## 3                            Doppel-Hirsch Doppelbock
+    ## 4 Double Love Honey Anniversary Dopplebock Doppelbock
+    ## 5 Brewmaster's Premium Reserve Dopple Bock Doppelbock
+    ## 6                              Cabin Fever    Maibock
 
-    ##                                                   Name            Type
-    ## 1                                                   Im     English IPA
-    ## 2 Jade IPAFoothills Brewing Company - Downtown Brewpub    American IPA
-    ## 3                      Dreadnaught3 Floyds Brewing Co.    Imperial IPA
-    ## 4                                              Ephraim New England IPA
-    ## 5                                        Travelin' Man     Belgian IPA
-    ## 6                                         The Realness    Imperial IPA
+    ##                           Name            Type
+    ## 1                  Head Hunter    American IPA
+    ## 2 RPM IPABoneyard Beer Company    American IPA
+    ## 3               Dank Statement    Imperial IPA
+    ## 4                    Alter Ego New England IPA
+    ## 5              Emerald Grouper    Imperial IPA
+    ## 6                 White Hatter     Belgian IPA
 
-    ##                                 Name            Type
-    ## 1                     Coconut Porter American Porter
-    ## 2                             Porter  English Porter
-    ## 3                      Tommys Porter  English Porter
-    ## 4                   Slingshot Porter American Porter
-    ## 5 Black Butte XXXIVDeschutes Brewery Imperial Porter
-    ## 6                        Achocolypse  English Porter
+    ##                                             Name            Type
+    ## 1                       Praamzius, Ruler of Time   Baltic Porter
+    ## 2                             Imperator Bałtycki   Baltic Porter
+    ## 3            Sunday Brunch - Bourbon Barrel-Aged Imperial Porter
+    ## 4            Bourbon Maple Wishes & Pecan Dreams Imperial Porter
+    ## 5                                        Eleanor American Porter
+    ## 6 Cellar Series: Öö XOPõhjala Brewery & Tap Room   Baltic Porter
 
-    ##                                     Name                    Type
-    ## 1                   Ashlawn Coffee Stout          American Stout
-    ## 2                       Black Note Stout American Imperial Stout
-    ## 3                       Dragonhead Stout           English Stout
-    ## 4 Santa's Private Reserve 2022Rogue Ales          American Stout
-    ## 5                     Emerald Isle Stout         Irish Dry Stout
-    ## 6              White Canyon Blonde Stout          American Stout
+    ##                                                  Name                    Type
+    ## 1 Bourbon County Brand 30th Anniversary Reserve Stout American Imperial Stout
+    ## 2                                   Nights Like These         Irish Dry Stout
+    ## 3                        Trade Day Cuban Coffee Stout          American Stout
+    ## 4                                   Black Magic Stout         Irish Dry Stout
+    ## 5                                      Solstice Stout American Imperial Stout
+    ## 6                            Orinoco Mocha Milk Stout           English Stout
