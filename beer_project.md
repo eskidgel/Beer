@@ -13,56 +13,57 @@ A variety pack of new, cool, and the best beers in the world!
 ### Bock variety pack
 
     ## # A tibble: 6 × 5
-    ##    Rank `Beer Name`             Ratings   Avg `Beer Type`
-    ##   <int> <chr>                   <chr>   <dbl> <chr>      
-    ## 1    NA Berkshire Maibock Lager <NA>    NA    Maibock    
-    ## 2    NA Maibock                 <NA>    NA    Maibock    
-    ## 3    NA Johannieter             <NA>    NA    Doppelbock 
-    ## 4    28 Texas style Bock        10       3.95 Bock       
-    ## 5    NA Blonde Bock             <NA>    NA    Maibock    
-    ## 6    NA Mayday Mayday Maibock   <NA>    NA    Maibock
+    ##    Rank `Beer Name`                                        Ratings   Avg Beer …¹
+    ##   <int> <chr>                                              <chr>   <dbl> <chr>  
+    ## 1    NA Ettaler Curator Doppelbock Original German Version <NA>    NA    Doppel…
+    ## 2    32 Bock                                               14       3.85 Bock   
+    ## 3    NA Shegöat                                            <NA>    NA    Weizen…
+    ## 4    NA Granitbock Ice                                     <NA>    NA    Eisbock
+    ## 5     6 La Trappe Bockbier                                 305      3.98 Bock   
+    ## 6    NA Schtüpulator                                       <NA>    NA    Doppel…
+    ## # … with abbreviated variable name ¹​`Beer Type`
 
 ## India Pale Ales
 
 ### IPA variety pack
 
     ## # A tibble: 6 × 2
-    ##   `Beer Name`                    `Beer Type` 
-    ##   <chr>                          <chr>       
-    ## 1 Coriolis                       Imperial IPA
-    ## 2 Highway To The Danker Zone     Imperial IPA
-    ## 3 Drippy Church                  American IPA
-    ## 4 East IPABrooklyn Brewery       English IPA 
-    ## 5 Jai Alai IPACigar City Brewing American IPA
-    ## 6 Petty Larceny                  American IPA
+    ##   `Beer Name`                     `Beer Type` 
+    ##   <chr>                           <chr>       
+    ## 1 The Assayer                     Imperial IPA
+    ## 2 Johnny Juice Bomb               English IPA 
+    ## 3 Hopus                           Belgian IPA 
+    ## 4 MoralitéBrasserie Dieu du Ciel! American IPA
+    ## 5 Drippy Church                   American IPA
+    ## 6 Hopulization                    Imperial IPA
 
 ## Porters
 
 ### Porter variety pack
 
     ## # A tibble: 6 × 2
-    ##   `Beer Name`                                                    `Beer Type`    
-    ##   <chr>                                                          <chr>          
-    ## 1 Pistol Bridge Porter                                           English Porter 
-    ## 2 Bourbon Barrel Aged Pay It Forward Cocoa Porter                American Porter
-    ## 3 Barrel-Aged Framinghammer - Vanilla                            Baltic Porter  
-    ## 4 Barrel-Aged Framinghammer - Coffee                             Baltic Porter  
-    ## 5 512 Whiskey Barrel Aged Double Pecan Porter512 Brewing Company Imperial Porter
-    ## 6 Barrel-Aged Double Pot & Kettle                                Imperial Porter
+    ##   `Beer Name`                  `Beer Type`    
+    ##   <chr>                        <chr>          
+    ## 1 ÖöPõhjala Brewery & Tap Room Baltic Porter  
+    ## 2 Peanut Butter Porter         American Porter
+    ## 3 Frayja                       Baltic Porter  
+    ## 4 Gravity Drop                 Baltic Porter  
+    ## 5 Aile Smoked Celtic Porter    English Porter 
+    ## 6 5Beans                       Baltic Porter
 
 ## Stouts
 
 ### Stout variety pack
 
     ## # A tibble: 6 × 2
-    ##   `Beer Name`                  `Beer Type`            
-    ##   <chr>                        <chr>                  
-    ## 1 Kentucky Coffee Barrel Stout English Stout          
-    ## 2 Campfire Stout               American Stout         
-    ## 3 First Crack                  American Stout         
-    ## 4 Chocolate Rain               American Imperial Stout
-    ## 5 Black H2O Oatmeal Stout      Oatmeal Stout          
-    ## 6 Skillet Donut Stout          Oatmeal Stout
+    ##   `Beer Name`    `Beer Type`            
+    ##   <chr>          <chr>                  
+    ## 1 Single Stack   American Stout         
+    ## 2 Persist        American Imperial Stout
+    ## 3 Rubus Cacao    American Stout         
+    ## 4 The Awakening  American Stout         
+    ## 5 Paddy Wagon    Irish Dry Stout        
+    ## 6 Tom Swamp Road American Stout
 
 Now that I have all of the beer available, I joined them all together to
 begin creating variety packs.
@@ -97,49 +98,49 @@ These values can be changed based on the individual.
 ### Variety pack
 
     ##                                      Name            Type
-    ## 1                    Generator Doppelbock      Doppelbock
-    ## 2                                    Duet    American IPA
-    ## 3 Hexagenia IPAFall River Brewing Company    American IPA
-    ## 4                           Smoked Porter   Smoked Porter
-    ## 5                     Gonzo - Barrel-Aged Imperial Porter
-    ## 6                          Mena Dhu Stout   English Stout
+    ## 1         Decapitator Bourbon Barrel Aged      Doppelbock
+    ## 2 Green Killer IPABrasserie de Silly S.A.     Belgian IPA
+    ## 3                                Sure Bet    Imperial IPA
+    ## 4                      Tall Dark & Smokey  English Porter
+    ## 5                               Catharsis American Porter
+    ## 6                                  Caligo   Oatmeal Stout
 
 ### Bock variety pack
 
-    ##                                                   Name       Type
-    ## 1                                       Granitbock Ice    Eisbock
-    ## 2                                 Hertog Jan Lentebock       Bock
-    ## 3 Ettaler Curator Dunkler Doppelbock US Import Version Doppelbock
-    ## 4                                       Prognosticator Doppelbock
-    ## 5                                           Strawgator    Maibock
-    ## 6                       Weltenburger Kloster Asam-Bock Doppelbock
+    ##                        Name       Type
+    ## 1        Bocks Of Chocolate Doppelbock
+    ## 2                Doppelbock Doppelbock
+    ## 3 Old Chico Brand Pale Bock    Maibock
+    ## 4             Doppel-Hirsch Doppelbock
+    ## 5                Older Gods    Maibock
+    ## 6        Ellicottville Bock    Maibock
 
 ### IPA variety pack
 
-    ##                                      Name         Type
-    ## 1   La Goudale IPALes Brasseurs de Gayant  Belgian IPA
-    ## 2      Farmhouse IPACrane Brewing Company  Belgian IPA
-    ## 3                      Some Of The Dharma American IPA
-    ## 4             Lotus IPAIlkley Brewery Co.  English IPA
-    ## 5                           Fleur Sauvage  Belgian IPA
-    ## 6 Ease Up IPAAdnams plc, Sole Bay Brewery  English IPA
+    ##                                          Name            Type
+    ## 1                             Perler For Svin     English IPA
+    ## 2                                Death Valley     Belgian IPA
+    ## 3                            Beowulf IPABrick     English IPA
+    ## 4                         Three Magic Letters    American IPA
+    ## 5                     Primátor India Pale Ale     English IPA
+    ## 6 Congress Street IPATrillium Brewing Company New England IPA
 
 ### Porter variety pack
 
-    ##                                                    Name            Type
-    ## 1                                     Black Duck Porter  English Porter
-    ## 2                                          Mocha Marlin American Porter
-    ## 3                                   Out Of Order Porter  English Porter
-    ## 4                   Sunday Brunch - Bourbon Barrel-Aged Imperial Porter
-    ## 5                                        Coconut Porter American Porter
-    ## 6 Who's Your Daddy? Bourbon Barrel-Aged Imperial Porter Imperial Porter
+    ##                   Name            Type
+    ## 1                Fionn Imperial Porter
+    ## 2            Elemental  English Porter
+    ## 3 Coffee Baltic Porter   Baltic Porter
+    ## 4       Coconut Porter American Porter
+    ## 5        Coffee Porter  English Porter
+    ## 6   BBA Baltic Sunrise   Baltic Porter
 
 ### Stout variety pack
 
-    ##                                        Name                    Type
-    ## 1                     Abraxas - Barrel-Aged American Imperial Stout
-    ## 2                            Stay Dry Stout           English Stout
-    ## 3                             Oatmeal Stout           Oatmeal Stout
-    ## 4                           Nitroboom Stout         Irish Dry Stout
-    ## 5                                    Valdez          American Stout
-    ## 6 Bourbon Barrel Aged Dark Star: Spice Wars           Oatmeal Stout
+    ##                                Name            Type
+    ## 1                      Vanilla Deth   Oatmeal Stout
+    ## 2                   Steeprock Stout Irish Dry Stout
+    ## 3                        Black Gold   English Stout
+    ## 4                    Jolly Woodsman  American Stout
+    ## 5 Father Kyle's Cinnamon Roll Stout  American Stout
+    ## 6                    The Rusty Nail   Oatmeal Stout
