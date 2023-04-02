@@ -10,8 +10,6 @@ A variety pack of new, cool, and the best beers in the world!
 
 ## Bocks
 
-## All bocks
-
     ## # A tibble: 100 × 5
     ##     Rank `Beer Name`                         Ratings   Avg `Beer Type`
     ##    <int> <chr>                               <chr>   <dbl> <chr>      
@@ -27,15 +25,20 @@ A variety pack of new, cool, and the best beers in the world!
     ## 10    10 Baphomet Bock                       34       4.02 Bock       
     ## # … with 90 more rows
 
+### Bock variety pack
+
+    bock_pack <- sample_n(all_bocks, 6)
+    bock_pack
+
     ## # A tibble: 6 × 5
-    ##    Rank `Beer Name`                 Ratings   Avg `Beer Type`
-    ##   <int> <chr>                       <chr>   <dbl> <chr>      
-    ## 1    48 Dreher Bak                  56       3.71 Bock       
-    ## 2    NA Hofbräu Delicator           <NA>    NA    Doppelbock 
-    ## 3    NA Jötunheimr                  <NA>    NA    Eisbock    
-    ## 4    NA Snow Weizen                 <NA>    NA    Weizenbock 
-    ## 5    NA Apfelstrudel Doppelbock     <NA>    NA    Doppelbock 
-    ## 6    NA Erdinger Weissbier Pikantus <NA>    NA    Weizenbock
+    ##    Rank `Beer Name`         Ratings   Avg `Beer Type`
+    ##   <int> <chr>               <chr>   <dbl> <chr>      
+    ## 1    33 Bokbier             81       3.79 Bock       
+    ## 2    NA Maibock             <NA>    NA    Maibock    
+    ## 3    NA Trendler Doppelbock <NA>    NA    Doppelbock 
+    ## 4    NA Minnator            <NA>    NA    Doppelbock 
+    ## 5    NA Spring Bock         <NA>    NA    Maibock    
+    ## 6    89 Ironshore Bock      52       3.33 Bock
 
 ## India Pale Ales
 
@@ -54,15 +57,20 @@ A variety pack of new, cool, and the best beers in the world!
     ## 10 Sculpin              American IPA
     ## # … with 481 more rows
 
+### IPA variety pack
+
+    ipa_pack <- sample_n(all_ipas, 6)
+    ipa_pack
+
     ## # A tibble: 6 × 2
-    ##   `Beer Name`                                `Beer Type`    
-    ##   <chr>                                      <chr>          
-    ## 1 Infidel                                    Belgian IPA    
-    ## 2 Joker IPAWilliams Brothers Brewing Company English IPA    
-    ## 3 HDHC All Citra Everything                  Imperial IPA   
-    ## 4 Very Green                                 New England IPA
-    ## 5 Sartori Harvest IPADriftwood Brewery       American IPA   
-    ## 6 Biggie, Biggie, Biggie                     New England IPA
+    ##   `Beer Name`                         `Beer Type`    
+    ##   <chr>                               <chr>          
+    ## 1 Very Hazy                           New England IPA
+    ## 2 Emperor Julius                      New England IPA
+    ## 3 Innocence                           Belgian IPA    
+    ## 4 The Dreamiest                       New England IPA
+    ## 5 The Secret Truth of the Universe    American IPA   
+    ## 6 Burton Bridge Empire India Pale Ale English IPA
 
 ## Porters
 
@@ -81,15 +89,20 @@ A variety pack of new, cool, and the best beers in the world!
     ## 10 Hearthbound               American Porter
     ## # … with 419 more rows
 
+### Porter variety pack
+
+    porter_pack <- sample_n(all_porters, 6)
+    porter_pack
+
     ## # A tibble: 6 × 2
-    ##   `Beer Name`        `Beer Type`    
-    ##   <chr>              <chr>          
-    ## 1 Smoke House Porter Smoked Porter  
-    ## 2 Pressed - Maple    Imperial Porter
-    ## 3 Sue                Smoked Porter  
-    ## 4 Mocha Marlin       American Porter
-    ## 5 Dark Thread Porter American Porter
-    ## 6 Eleanor            American Porter
+    ##   `Beer Name`            `Beer Type`    
+    ##   <chr>                  <chr>          
+    ## 1 Hamer & Sikkel         English Porter 
+    ## 2 Shake Chocolate Porter American Porter
+    ## 3 Pendragon Porter       English Porter 
+    ## 4 Bricks & Mortar        American Porter
+    ## 5 Pressed - Hazelnut     Imperial Porter
+    ## 6 German Chocolate Cake  American Porter
 
 ## Stouts
 
@@ -108,15 +121,20 @@ A variety pack of new, cool, and the best beers in the world!
     ## 10 Fundamental Observation                             American Imperial Stout
     ## # … with 460 more rows
 
+### Stout variety pack
+
+    stout_pack <- sample_n(all_stouts, 6)
+    stout_pack
+
     ## # A tibble: 6 × 2
-    ##   `Beer Name`                      `Beer Type`            
-    ##   <chr>                            <chr>                  
-    ## 1 Snowed In - Cherry               Oatmeal Stout          
-    ## 2 Rise Up Coffee Stout             American Stout         
-    ## 3 Cobblestone Stout                Irish Dry Stout        
-    ## 4 Pirate Bomb!Prairie Artisan Ales American Imperial Stout
-    ## 5 Gwin Du Oatmeal Stout            Oatmeal Stout          
-    ## 6 Smells Like Bean Spirit          American Stout
+    ##   `Beer Name`                                         `Beer Type`            
+    ##   <chr>                                               <chr>                  
+    ## 1 Bourbon County Brand 30th Anniversary Reserve Stout American Imperial Stout
+    ## 2 Earl                                                Oatmeal Stout          
+    ## 3 Irish Stout                                         Irish Dry Stout        
+    ## 4 The Awakening                                       American Stout         
+    ## 5 Baby Scoop3 Sons Brewing Company                    American Stout         
+    ## 6 Space Trace                                         American Imperial Stout
 
 Now that I have all of the beer available, let’s join them all together
 to begin creating variety packs.
@@ -132,46 +150,53 @@ This is the interactive portion of the project. The “beer picker”
 function allows the user to personalize their pack of beer based on
 preference.
 
-As you see in the variety pack, it shows “beer\_picker(1,2,2,1).” This
-means your variety pack will consist of one bock, two IPAs, two porters,
-and one stout. These values can be changed based on the individual.
+The “beer\_picker” function is set to (1,2,2,1). This means the variety
+pack will consist of one bock, two IPAs, two porters, and one stout.
+These values can be changed based on the individual.
 
-    ##                        Name            Type
-    ## 1               Dinkel Bock            Bock
-    ## 2  Water Balloon Fight Club    Imperial IPA
-    ## 3 More Citra Than All Citra    Imperial IPA
-    ## 4               Black Pearl Imperial Porter
-    ## 5              Killer Boots  English Porter
-    ## 6 Shakespeare Oatmeal Stout   Oatmeal Stout
+    ##                                      Name            Type
+    ## 1                          Pandora's Bock            Bock
+    ## 2                                   Green New England IPA
+    ## 3 Green Killer IPABrasserie de Silly S.A.     Belgian IPA
+    ## 4                        Cocoa Wonderland  English Porter
+    ## 5                            Gravity Drop   Baltic Porter
+    ## 6                         Cranberry Stout   English Stout
 
-    ##                           Name       Type
-    ## 1 EKU 28Kulmbacher Brauerei AG Doppelbock
-    ## 2                  Blonde Bock    Maibock
-    ## 3            Der Schwarze Bock Doppelbock
-    ## 4                  Noche Buena       Bock
-    ## 5      Berkshire Maibock Lager    Maibock
-    ## 6                Winter Böckle       Bock
+    ##                         Name       Type
+    ## 1 Augustus 8Brauhaus Riegele Weizenbock
+    ## 2                 Niner Bock       Bock
+    ## 3                   Quirinus Doppelbock
+    ## 4                    Maypole    Maibock
+    ## 5                  Eis Maker    Eisbock
+    ## 6            Tip Top Maibock    Maibock
 
-    ##                                                   Name            Type
-    ## 1                               Curiosity Twenty Seven    Imperial IPA
-    ## 2 Vedett Extra Ordinary IPABrouwerij Duvel Moortgat NV     Belgian IPA
-    ## 3                       Juice Project - Citra + Galaxy    Imperial IPA
-    ## 4                                         Focal Banger New England IPA
-    ## 5                           Worthington's White Shield     English IPA
-    ## 6                                    Nelson Single Hop    American IPA
+    ##                      Name            Type
+    ## 1           Travelin' Man     Belgian IPA
+    ## 2   Exponential Hoppiness    Imperial IPA
+    ## 3                 Glaucus     Belgian IPA
+    ## 4  Triple Simcoe Daydream    Imperial IPA
+    ## 5 Brighter Than Starlight New England IPA
+    ## 6               Amer Amer     Belgian IPA
 
-    ##                                         Name            Type
-    ## 1                   Peanut Butter Cup Porter  English Porter
-    ## 2 Barrel-Aged Framinghammer - Graham Cracker   Baltic Porter
-    ## 3                       Abstraction - Coffee Imperial Porter
-    ## 4                                        Rub   Smoked Porter
-    ## 5                              Coffee Porter  English Porter
-    ## 6                             Dark Reckoning   Baltic Porter
+    ##                                             Name            Type
+    ## 1 Coconut Vanilla Java Porter VJPAtwater Brewery  English Porter
+    ## 2                      VIMHalf Acre Beer Company   Baltic Porter
+    ## 3                       Raspberry Vanilla Porter American Porter
+    ## 4                                         Porter  English Porter
+    ## 5        Knecht Ruprecht IIThe Lone Pint Brewery American Porter
+    ## 6                           Coffee Baltic Porter   Baltic Porter
 
-    ##                 Name                    Type
-    ## 1   Bourbon Paradise American Imperial Stout
-    ## 2    Breakfast Stout           Oatmeal Stout
-    ## 3     Mena Dhu Stout           English Stout
-    ## 4   Irish Table Beer         Irish Dry Stout
-    ## 5 Black Mo Dry Stout         Irish Dry Stout
-    ## 6       O.V.L. Stout         Irish Dry Stout
+    ##                                                                   Name
+    ## 1                                                   Pan-American Stout
+    ## 2                                                         The Claddagh
+    ## 3                Bourbon Barrel Aged Dark Star: Coffee, Cacao, Vanilla
+    ## 4 Lumberjack Morning Break - Bourbon Barrel-Aged3 Sons Brewing Company
+    ## 5                                    Irish Whiskey Aged Scottish Stout
+    ## 6                                          Velvet Merlin Oatmeal Stout
+    ##                      Type
+    ## 1           Oatmeal Stout
+    ## 2         Irish Dry Stout
+    ## 3           Oatmeal Stout
+    ## 4 American Imperial Stout
+    ## 5           English Stout
+    ## 6           Oatmeal Stout
