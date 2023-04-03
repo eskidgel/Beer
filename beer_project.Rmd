@@ -2,7 +2,7 @@
 title: "Beer_Work"
 author: "Emilee Skidgel"
 date: "2023-03-09"
-output: md_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -40,7 +40,7 @@ bocks <- read_html(bock_link) %>%
 bocks['Beer Type'] <- "Bock"
 
 colnames(bocks) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-bocks <- bocks %>% select(-c('You'))
+bocks <- bocks %>% select(-c('Rank', 'You'))
 
 bocks$Name <- gsub("\\(|\\)", "", bocks$Name)
 bocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", bocks$Name)
@@ -60,7 +60,7 @@ doppelbocks <- read_html(doppelbock_link) %>%
 doppelbocks['Beer Type'] <- "Doppelbock"
 
 colnames(doppelbocks) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-doppelbocks <- doppelbocks %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+doppelbocks <- doppelbocks %>% select(-c('Rank', 'You'))
 
 doppelbocks$Name <- gsub("\\(|\\)", "", doppelbocks$Name)
 doppelbocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", doppelbocks$Name)
@@ -80,7 +80,7 @@ eisbocks <- read_html(eisbock_link) %>%
 eisbocks['Beer Type'] <- "Eisbock"
 
 colnames(eisbocks) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-eisbocks <- eisbocks %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+eisbocks <- eisbocks %>% select(-c('Rank', 'You'))
 
 eisbocks$Name <- gsub("\\(|\\)", "", eisbocks$Name)
 eisbocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", eisbocks$Name)
@@ -100,7 +100,7 @@ maibocks <- read_html(maibock_link) %>%
 maibocks['Beer Type'] <- "Maibock"
 
 colnames(maibocks) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-maibocks <- maibocks %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+maibocks <- maibocks %>% select(-c('Rank', 'You'))
 
 maibocks$Name <- gsub("\\(|\\)", "", maibocks$Name)
 maibocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", maibocks$Name)
@@ -120,7 +120,7 @@ weizenbocks <- read_html(weizenbock_link) %>%
 weizenbocks['Beer Type'] <- "Weizenbock"
 
 colnames(weizenbocks) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-weizenbocks <- weizenbocks %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+weizenbocks <- weizenbocks %>% select(-c('Rank', 'You'))
 
 weizenbocks$Name <- gsub("\\(|\\)", "", weizenbocks$Name)
 weizenbocks$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", weizenbocks$Name)
@@ -129,8 +129,8 @@ weizenbocks <- tidyr::separate(weizenbocks, Name, c("Beer Name", "Brewery"), sep
 weizenbocks <- weizenbocks %>% select(-c('Brewery'))
 ```
 
+```{r warning=FALSE, include=FALSE}
 ## All bocks
-```{r echo=FALSE, warning=FALSE}
 all_bocks <- dplyr::bind_rows(bocks,
                               doppelbocks,
                               eisbocks,
@@ -138,7 +138,10 @@ all_bocks <- dplyr::bind_rows(bocks,
                               weizenbocks)
 
 na.omit(all_bocks)
+```
 
+### Bock variety pack
+```{r echo=FALSE}
 bock_pack <- sample_n(all_bocks, 6)
 bock_pack
 ```
@@ -163,7 +166,7 @@ american_ipa <- read_html(american_link) %>%
 american_ipa['Beer Type'] <- "American IPA"
 
 colnames(american_ipa) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-american_ipa <- american_ipa %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+american_ipa <- american_ipa %>% select(-c('Rank', 'You'))
 
 american_ipa$Name <- gsub("\\(|\\)", "", american_ipa$Name)
 american_ipa$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", american_ipa$Name)
@@ -183,7 +186,7 @@ belgian_ipa <- read_html(belgian_link) %>%
 belgian_ipa['Beer Type'] <- "Belgian IPA"
 
 colnames(belgian_ipa) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-belgian_ipa <- belgian_ipa %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+belgian_ipa <- belgian_ipa %>% select(-c('Rank', 'You'))
 
 belgian_ipa$Name <- gsub("\\(|\\)", "", belgian_ipa$Name)
 belgian_ipa$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", belgian_ipa$Name)
@@ -203,7 +206,7 @@ english_ipa <- read_html(english_link) %>%
 english_ipa['Beer Type'] <- "English IPA"
 
 colnames(english_ipa) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-english_ipa <- english_ipa %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+english_ipa <- english_ipa %>% select(-c('Rank', 'You'))
 
 english_ipa$Name <- gsub("\\(|\\)", "", english_ipa$Name)
 english_ipa$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", english_ipa$Name)
@@ -223,7 +226,7 @@ imperial_ipa <- read_html(imperial_link) %>%
 imperial_ipa['Beer Type'] <- "Imperial IPA"
 
 colnames(imperial_ipa) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-imperial_ipa <- imperial_ipa %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+imperial_ipa <- imperial_ipa %>% select(-c('Rank', 'You'))
 
 imperial_ipa$Name <- gsub("\\(|\\)", "", imperial_ipa$Name)
 imperial_ipa$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", imperial_ipa$Name)
@@ -243,7 +246,7 @@ newengland_ipa <- read_html(newengland_link) %>%
 newengland_ipa['Beer Type'] <- "New England IPA"
 
 colnames(newengland_ipa) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-newengland_ipa <- newengland_ipa %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+newengland_ipa <- newengland_ipa %>% select(-c('Rank', 'You'))
 
 newengland_ipa$Name <- gsub("\\(|\\)", "", newengland_ipa$Name)
 newengland_ipa$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", newengland_ipa$Name)
@@ -252,7 +255,7 @@ newengland_ipa <- tidyr::separate(newengland_ipa, Name, c("Beer Name", "Brewery"
 newengland_ipa <- newengland_ipa %>% select(-c('Brewery'))
 ```
 
-```{r echo=FALSE}
+```{r include=FALSE}
 # All IPAs
 all_ipas <- dplyr::bind_rows(american_ipa,
                               belgian_ipa,
@@ -261,7 +264,10 @@ all_ipas <- dplyr::bind_rows(american_ipa,
                               newengland_ipa)
 
 na.omit(all_ipas)
+```
 
+### IPA variety pack
+```{r echo=FALSE}
 ipa_pack <- sample_n(all_ipas, 6)
 ipa_pack
 ```
@@ -286,7 +292,7 @@ american_porter <- read_html(american_porter_link) %>%
 american_porter['Beer Type'] <- "American Porter"
 
 colnames(american_porter) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-american_porter <- american_porter %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+american_porter <- american_porter %>% select(-c('Rank', 'You'))
 
 american_porter$Name <- gsub("\\(|\\)", "", american_porter$Name)
 american_porter$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", american_porter$Name)
@@ -306,7 +312,7 @@ baltic_porter <- read_html(baltic_porter_link) %>%
 baltic_porter['Beer Type'] <- "Baltic Porter"
 
 colnames(baltic_porter) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-baltic_porter <- baltic_porter %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+baltic_porter <- baltic_porter %>% select(-c('Rank', 'You'))
 
 baltic_porter$Name <- gsub("\\(|\\)", "", baltic_porter$Name)
 baltic_porter$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", baltic_porter$Name)
@@ -326,7 +332,7 @@ english_porter <- read_html(english_porter_link) %>%
 english_porter['Beer Type'] <- "English Porter"
 
 colnames(english_porter) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-english_porter <- english_porter %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+english_porter <- english_porter %>% select(-c('Rank', 'You'))
 
 english_porter$Name <- gsub("\\(|\\)", "", english_porter$Name)
 english_porter$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", english_porter$Name)
@@ -346,7 +352,7 @@ imperial_porter <- read_html(imperial_porter_link) %>%
 imperial_porter['Beer Type'] <- "Imperial Porter"
 
 colnames(imperial_porter) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-imperial_porter <- imperial_porter %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+imperial_porter <- imperial_porter %>% select(-c('Rank', 'You'))
 
 imperial_porter$Name <- gsub("\\(|\\)", "", imperial_porter$Name)
 imperial_porter$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", imperial_porter$Name)
@@ -366,7 +372,7 @@ smoked_porter <- read_html(smoked_porter_link) %>%
 smoked_porter['Beer Type'] <- "Smoked Porter"
 
 colnames(smoked_porter) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-smoked_porter <- smoked_porter %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+smoked_porter <- smoked_porter %>% select(-c('Rank', 'You'))
 
 smoked_porter$Name <- gsub("\\(|\\)", "", smoked_porter$Name)
 smoked_porter$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", smoked_porter$Name)
@@ -375,7 +381,7 @@ smoked_porter <- tidyr::separate(smoked_porter, Name, c("Beer Name", "Brewery"),
 smoked_porter <- smoked_porter %>% select(-c('Brewery'))
 ```
 
-```{r echo=FALSE}
+```{r include=FALSE}
 # All porters
 all_porters <- dplyr::bind_rows(american_porter,
                               baltic_porter,
@@ -384,7 +390,10 @@ all_porters <- dplyr::bind_rows(american_porter,
                               smoked_porter)
 
 na.omit(all_porters)
+```
 
+### Porter variety pack
+```{r echo=FALSE}
 porter_pack <- sample_n(all_porters, 6)
 porter_pack
 ```
@@ -409,7 +418,7 @@ american_imperial <- read_html(american_imperial_link) %>%
 american_imperial['Beer Type'] <- "American Imperial Stout"
 
 colnames(american_imperial) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-american_imperial <- american_imperial %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+american_imperial <- american_imperial %>% select(-c('Rank', 'You'))
 
 american_imperial$Name <- gsub("\\(|\\)", "", american_imperial$Name)
 american_imperial$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", american_imperial$Name)
@@ -429,7 +438,7 @@ american_stout <- read_html(american_stout_link) %>%
 american_stout['Beer Type'] <- "American Stout"
 
 colnames(american_stout) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-american_stout <- american_stout %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+american_stout <- american_stout %>% select(-c('Rank', 'You'))
 
 american_stout$Name <- gsub("\\(|\\)", "", american_stout$Name)
 american_stout$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", american_stout$Name)
@@ -449,7 +458,7 @@ english_stout <- read_html(english_stout_link) %>%
 english_stout['Beer Type'] <- "English Stout"
 
 colnames(english_stout) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-english_stout <- english_stout %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+english_stout <- english_stout %>% select(-c('Rank', 'You'))
 
 english_stout$Name <- gsub("\\(|\\)", "", english_stout$Name)
 english_stout$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", english_stout$Name)
@@ -469,7 +478,7 @@ irish_dry_stout <- read_html(irish_dry_stout_link) %>%
 irish_dry_stout['Beer Type'] <- "Irish Dry Stout"
 
 colnames(irish_dry_stout) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-irish_dry_stout <- irish_dry_stout %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+irish_dry_stout <- irish_dry_stout %>% select(-c('Rank', 'You'))
 
 irish_dry_stout$Name <- gsub("\\(|\\)", "", irish_dry_stout$Name)
 irish_dry_stout$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", irish_dry_stout$Name)
@@ -489,7 +498,7 @@ oatmeal_stout <- read_html(oatmeal_stout_link) %>%
 oatmeal_stout['Beer Type'] <- "Oatmeal Stout"
 
 colnames(oatmeal_stout) <- c('Rank', 'Name', 'Ratings', 'Avg', 'You', 'Beer Type')
-oatmeal_stout <- oatmeal_stout %>% select(-c('Rank', 'Ratings', 'Avg', 'You'))
+oatmeal_stout <- oatmeal_stout %>% select(-c('Rank', 'You'))
 
 oatmeal_stout$Name <- gsub("\\(|\\)", "", oatmeal_stout$Name)
 oatmeal_stout$Name <- gsub("([a-z])([A-Z])", "\\1_\\2", oatmeal_stout$Name)
@@ -498,8 +507,8 @@ oatmeal_stout <- tidyr::separate(oatmeal_stout, Name, c("Beer Name", "Brewery"),
 oatmeal_stout <- oatmeal_stout %>% select(-c('Brewery'))
 ```
 
-```{r echo=FALSE}
-# All stouts
+```{r include=FALSE}
+# All porters
 all_stouts <- dplyr::bind_rows(american_imperial,
                               american_stout,
                               english_stout,
@@ -507,63 +516,70 @@ all_stouts <- dplyr::bind_rows(american_imperial,
                               oatmeal_stout)
 
 na.omit(all_stouts)
-
-stout_pack <- sample_n(all_stouts, 6)
-stout_pack
 ```
 
 Now that I have all of the beer available, let's join them all together to begin creating variety packs. 
 
-```{r warning=FALSE, include=FALSE}
+```{r}
 all_beers <- dplyr::bind_rows(all_bocks,
                               all_ipas,
                               all_porters,
                               all_stouts)
-
-na.omit(all_beers)
 ```
+
+
+```{r}
+save(all_beers, file = "beer_info.rda")
+```
+
 
 Let's get packing. 
 
-```{r include=FALSE}
+```{r}
 library(tidyverse)
 ```
 
-I created a function called "beer picker" that allows the system to sample through the beers.
 
-```{r warning=FALSE, include=FALSE}
+As you see in the variety pack, it shows "beer_picker(1,2,2,1)." This means your variety pack will consist of one bock, two IPAs, two porters, and one stout. These values can be changed based on the individual.
+
+I created a function called "beer picker" that allows the system to sample through the beers.
+```{r}
 beer_picker <- function(bocks_n, ipas_n, porters_n, stouts_n) {
   #bocks
   bocks_sample <- sample(1:nrow(all_bocks), bocks_n)
   bname <- all_bocks$`Beer Name`[bocks_sample]
   btype <- all_bocks$`Beer Type`[bocks_sample]
+  brating <- all_bocks$`Ratings`[bocks_sample]
+  bavg <- all_bocks$`Avg`[bocks_sample]
   
   #ipas
   ipas_sample <- sample(1:nrow(all_ipas), ipas_n)
   iname <- all_ipas$`Beer Name`[ipas_sample]
   itype <- all_ipas$`Beer Type`[ipas_sample]
+  irating <- all_ipas$`Ratings`[ipas_sample]
+  iavg <- all_ipas$`Avg`[ipas_sample]
   
   #porters
   porters_sample <- sample(1:nrow(all_porters), porters_n)
   pname <- all_porters$`Beer Name`[porters_sample]
   ptype <- all_porters$`Beer Type`[porters_sample]
+  prating <- all_porters$`Ratings`[porters_sample]
+  pavg <- all_porters$`Avg`[porters_sample]
   
   #stouts
   stouts_sample <- sample(1:nrow(all_stouts), stouts_n)
   sname <- all_stouts$`Beer Name`[stouts_sample]
   stype <- all_stouts$`Beer Type`[stouts_sample]
+  srating <- all_bocks$`Ratings`[stouts_sample]
+  savg <- all_bocks$`Avg`[stouts_sample]
   
-  beer_df <- data.frame(Name = c(bname, iname, pname, sname), Type = c(btype, itype, ptype, stype))
-  
+  beer_df <- data.frame(Name = c(bname, iname, pname, sname), Type = c(btype, itype, ptype, stype),
+                        Rating = c(brating, irating, prating, srating), Avg = c(bavg, iavg, pavg, savg))
+  return(beer_df)
 }
 ```
 
-## INTERACTIVE INPUT
-This is the interactive portion of the project. The "beer picker" function allows the user to personalize their pack of beer based on preference. 
-
-As you see in the variety pack, it shows "beer_picker(1,2,2,1)." This means your variety pack will consist of one bock, two IPAs, two porters, and one stout. These values can be changed based on the individual. 
-
-```{r echo=FALSE, warning=FALSE}
+```{r}
 # Variety pack
 variety_pack <- beer_picker(1,2,2,1)
 variety_pack
@@ -583,3 +599,5 @@ porter_pack
 stout_pack <- beer_picker(0,0,0,6)
 stout_pack
 ```
+
+
