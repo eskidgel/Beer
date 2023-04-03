@@ -138,6 +138,7 @@ all_bocks <- dplyr::bind_rows(bocks,
                               weizenbocks)
 
 na.omit(all_bocks)
+
 ```
 
 ### Bock variety pack
