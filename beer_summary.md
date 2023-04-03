@@ -5,119 +5,105 @@
 ### Bock variety pack
 
     ## # A tibble: 6 × 4
-    ##   `Beer Name`                      Ratings   Avg `Beer Type`
-    ##   <chr>                            <chr>   <dbl> <chr>      
-    ## 1 Snake Venom                      16       3.24 Eisbock    
-    ## 2 The Bock Hog                     18       3.83 Doppelbock 
-    ## 3 The Lewbricator                  40       3.83 Doppelbock 
-    ## 4 Mardi Gras Bock                  860      3.47 Maibock    
-    ## 5 Tip Top Maibock                  14       3.89 Maibock    
-    ## 6 Chopping Wood - Doppelbock Lager 17       4.18 Doppelbock
+    ##   `Beer Name`                     Ratings   Avg `Beer Type`
+    ##   <chr>                           <chr>   <dbl> <chr>      
+    ## 1 Toasted Bock                    125      3.65 Bock       
+    ## 2 Brugse Bok                      33       3.6  Bock       
+    ## 3 1516 Heller Bock                13       4.23 Maibock    
+    ## 4 Erdinger Weissbier Pikantus     569      3.87 Weizenbock 
+    ## 5 Decapitator Bourbon Barrel Aged 11       4.26 Doppelbock 
+    ## 6 Marc's Chocolate Bock           45       3.95 Doppelbock
 
 ## India Pale Ales
 
 ### IPA variety pack
 
     ## # A tibble: 6 × 4
-    ##   `Beer Name`                                    Ratings   Avg `Beer Type`    
-    ##   <chr>                                          <chr>   <dbl> <chr>          
-    ## 1 Furious                                        5,955    4.28 American IPA   
-    ## 2 Mastermind                                     1,501    4.43 New England IPA
-    ## 3 Squeezit                                       48       4.44 Imperial IPA   
-    ## 4 Galactic Haze IPAHop and Sting Brewing Company 23       3.71 Belgian IPA    
-    ## 5 Paljas IPABrouwerij Henricus                   24       3.62 Belgian IPA    
-    ## 6 Double Hop Monster                             67       3.53 English IPA
+    ##   `Beer Name`                                 Ratings   Avg `Beer Type`    
+    ##   <chr>                                       <chr>   <dbl> <chr>          
+    ## 1 Shogun JIPAGotlands Bryggeri                14       3.84 English IPA    
+    ## 2 Zeus Imperial IPALengthwise Brewing Company 187      4.38 Imperial IPA   
+    ## 3 Peril                                       250      4.39 Imperial IPA   
+    ## 4 Double Dry Hopped Double Mosaic Dream       738      4.52 New England IPA
+    ## 5 Perler For Svin                             29       4.09 English IPA    
+    ## 6 India Pale Ale                              567      3.71 English IPA
 
 ## Porters
 
 ### Porter variety pack
 
     ## # A tibble: 6 × 4
-    ##   `Beer Name`                             Ratings   Avg `Beer Type`    
-    ##   <chr>                                   <chr>   <dbl> <chr>          
-    ## 1 Genesee Salted Caramel Chocolate Porter 159      3.94 English Porter 
-    ## 2 Fire on the Coals                       20       4.45 Imperial Porter
-    ## 3 Baba Yaga                               27       4.1  American Porter
-    ## 4 Picture City Porter                     39       4.04 American Porter
-    ## 5 Pudding Dribbles                        37       4.53 Imperial Porter
-    ## 6 King Royal                              50       4.1  Baltic Porter
+    ##   `Beer Name`                 Ratings   Avg `Beer Type`    
+    ##   <chr>                       <chr>   <dbl> <chr>          
+    ## 1 Dark Anchor                 28       3.98 English Porter 
+    ## 2 Morning Bell                494      4.32 Imperial Porter
+    ## 3 Puddy Porter                19       4.03 Baltic Porter  
+    ## 4 German Chocolate Cake       15       4.06 American Porter
+    ## 5 Cupid's Envy                13       4.2  Imperial Porter
+    ## 6 Wrecking Ball Baltic Porter 26       4    Baltic Porter
 
 ## Stouts
 
-### Porter variety pack
+### Stouts variety pack
 
     ## # A tibble: 6 × 4
-    ##   `Beer Name`                  Ratings   Avg `Beer Type`    
-    ##   <chr>                        <chr>   <dbl> <chr>          
-    ## 1 Coffee Coconut Stout         160      4.14 American Stout 
-    ## 2 Gordo Stout                  43       3.66 Irish Dry Stout
-    ## 3 Pan-American Stout           26       4.05 Oatmeal Stout  
-    ## 4 Choc & Orange Stout          10       3.85 English Stout  
-    ## 5 Beamish Irish Stout          807      3.81 Irish Dry Stout
-    ## 6 MFB 9.0Mountain Fork Brewery 13       4.05 American Stout
+    ##   `Beer Name`                                         Ratings   Avg `Beer Type` 
+    ##   <chr>                                               <chr>   <dbl> <chr>       
+    ## 1 Alien Hymns And Stoner Fables                       28       4.23 Oatmeal Sto…
+    ## 2 Mocha Wednesday                                     1,496    4.49 American Im…
+    ## 3 The Claddagh                                        13       3.94 Irish Dry S…
+    ## 4 Black Scottish Stout                                333      3.66 Irish Dry S…
+    ## 5 Ola Dubh Special Reserve 16Harviestoun Brewery Ltd. 662      4.13 English Sto…
+    ## 6 O'Hara's Irish Stout                                1,063    3.87 Irish Dry S…
 
 Let’s get packing.
 
 I created a function called “beer picker” that allows the system to
 sample through the beers.
 
-    ##                                                    Name            Type Rating
-    ## 1                                   Trendler Doppelbock      Doppelbock     18
-    ## 2               Chainbreaker White IPADeschutes Brewery     Belgian IPA  2,176
-    ## 3                                                  Haze New England IPA  3,176
-    ## 4 Who's Your Daddy? Bourbon Barrel-Aged Imperial Porter Imperial Porter    175
-    ## 5                                        Baltic Sunrise   Baltic Porter     64
-    ## 6                             Lil' Jifforia - Fat Elvis  American Stout     23
+    ##                             Name            Type Rating  Avg
+    ## 1          Marc's Chocolate Bock      Doppelbock     45 3.95
+    ## 2                Super Supernaut    Imperial IPA     95 4.43
+    ## 3                       Vicinity New England IPA  1,790 4.45
+    ## 4 Hidden Pipe Porter With Coffee American Porter     78 4.04
+    ## 5                Postman's Knock  English Porter     31 3.70
+    ## 6              Triple Chocoholic   English Stout     10 3.94
+
+    ##                              Name    Type Rating  Avg
+    ## 1              Schmucker Rosébock Maibock     30 3.80
+    ## 2 Schorschbock Ice 13Schorschbräu Eisbock     29 3.78
+    ## 3                 Huber Bock Beer    Bock    115 3.17
+    ## 4                  Goat Destroyer Maibock     17 3.95
+    ## 5   Bockslider Toadies Texas Bock    Bock     94 3.76
+    ## 6                  St. Bonifatius Maibock     23 3.45
+
+    ##                                      Name            Type Rating  Avg
+    ## 1                              Upper Case New England IPA  1,033 4.51
+    ## 2 Tasmanian IPA TIPAThe Schlafly Tap Room    American IPA  1,754 4.24
+    ## 3                                Squeezit    Imperial IPA     48 4.44
+    ## 4                           Double Galaxy New England IPA  1,682 4.59
+    ## 5                                 Mammoth    Imperial IPA    112 4.45
+    ## 6                        Troubadour Magma     Belgian IPA    553 3.93
+
+    ##                            Name            Type Rating  Avg
+    ## 1                    Soothsayer   Baltic Porter     14 4.10
+    ## 2                Murder Ballads   Baltic Porter     17 4.17
+    ## 3                 Hell's Holler  English Porter     13 4.03
+    ## 4                  Midnight Sun  English Porter    166 3.91
+    ## 5                     Last Snow American Porter  2,162 4.46
+    ## 6 Black Butte³Deschutes Brewery Imperial Porter     42 4.42
+
+    ##                                          Name                    Type Rating
+    ## 1             Guinness Nitro Cold Brew Coffee         Irish Dry Stout     19
+    ## 2                                   Black Cab           English Stout     25
+    ## 3                           Cobblestone Stout         Irish Dry Stout  3,913
+    ## 4 Beer Geek Vanilla Shake Barrel Aged Bourbon American Imperial Stout     31
+    ## 5             Black Tuesday - Rum Barrel-Aged American Imperial Stout     11
+    ## 6                 Baby Bob2SP Brewing Company          American Stout     16
     ##    Avg
-    ## 1 4.14
-    ## 2 3.67
-    ## 3 4.57
-    ## 4 4.26
-    ## 5 4.02
-    ## 6 3.88
-
-    ##                 Name       Type Rating  Avg
-    ## 1 Norbertus Kardinal       Bock     15 3.15
-    ## 2         The Bennie       Bock     72 3.48
-    ## 3        Mai-Ur-Bock    Maibock    471 3.78
-    ## 4        Blonde Bock    Maibock    340 3.33
-    ## 5              #Carl    Maibock     17 3.64
-    ## 6     Curse The Goat Doppelbock     11 3.88
-
-    ##                                                             Name
-    ## 1                                                      Big Peach
-    ## 2                                                      Mass Riot
-    ## 3 Double Dry Hopped Stillings Street IPATrillium Brewing Company
-    ## 4                                         Triple Simcoe Daydream
-    ## 5                        Ease Up IPAAdnams plc, Sole Bay Brewery
-    ## 6                                   Earl Grey IPAThe Marble Arch
-    ##              Type Rating  Avg
-    ## 1 New England IPA     63 4.48
-    ## 2    American IPA     69 4.36
-    ## 3 New England IPA    414 4.43
-    ## 4    Imperial IPA     32 4.44
-    ## 5     English IPA     12 3.69
-    ## 6     English IPA     22 4.04
-
-    ##                          Name            Type Rating  Avg
-    ## 1                 Panther Cub Imperial Porter    337 4.17
-    ## 2   Cellar Series: Honey Laku Imperial Porter     13 4.16
-    ## 3         London Style Porter  English Porter    104 3.89
-    ## 4 Wrecking Ball Baltic Porter   Baltic Porter     26 4.00
-    ## 5      Blackbeard's Breakfast Imperial Porter    442 4.13
-    ## 6                Pot & Kettle American Porter    772 4.20
-
-    ##                                            Name                    Type Rating
-    ## 1 B.O.R.I.S. The Crusher - Extended Barrel-Aged           Oatmeal Stout   <NA>
-    ## 2                 Barrel Aged B.O.R.I.S. Royale           Oatmeal Stout   <NA>
-    ## 3                         Gwin Du Oatmeal Stout           Oatmeal Stout   <NA>
-    ## 4                                  Charon Stout         Irish Dry Stout     20
-    ## 5                               Nitroboom Stout         Irish Dry Stout   <NA>
-    ## 6                                  Ground State American Imperial Stout     31
-    ##    Avg
-    ## 1   NA
-    ## 2   NA
-    ## 3   NA
-    ## 4 3.85
-    ## 5   NA
-    ## 6 3.65
+    ## 1 3.75
+    ## 2 3.91
+    ## 3 4.28
+    ## 4 3.62
+    ## 5 3.31
+    ## 6 3.97
